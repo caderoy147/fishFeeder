@@ -8,7 +8,7 @@
 #define LED_BUILTIN 2   // Set the GPIO pin where you connected your test LED or comment this line out if your dev board has a built-in LED
 
 const int stepsPerRevolution = 2048;
-Stepper myStepper(stepsPerRevolution,18, 12, 19, 13);  
+Stepper myStepper(stepsPerRevolution,32, 25, 33, 26);  
 WiFiServer server(80);
 
 void setup() {
@@ -43,13 +43,17 @@ void setup() {
     delay(5000);
   }
 
+  // Set ESP32 hostname
+  WiFi.hostname("feedr");
+
   // Print WiFi status
   Serial.println("Connected to WiFi");
   Serial.println("IP address: " + WiFi.localIP().toString());
+  Serial.println(WiFi.getHostname());
 
   server.begin();
   Serial.println("Server started");
-  myStepper.setSpeed(2);
+  myStepper.setSpeed(15);
 }
 
 void loop() {
