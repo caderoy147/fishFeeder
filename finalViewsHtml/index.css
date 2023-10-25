@@ -87,3 +87,19 @@ header object {
   margin-top: 20px;
   margin-left: 90px;
 }
+
+
+/* Scheduler html */
+.sh_container{
+  display: flex;
+  align-items: center;
+}
+.sh_container_time{
+  padding: 10px;
+}
+.sh_container_days{
+  padding: 10px;
+}
+.sh_container_save{
+  padding: 10px;
+}

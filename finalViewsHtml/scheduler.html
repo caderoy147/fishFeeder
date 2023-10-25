@@ -4,9 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
-  <title>scheduler</title>
+  <title>Scheduler</title>
 </head>
 <body>
-  
+  <header>
+    <h1>FISH FEEDER</h1>
+    <object data="img/fishfeederlogo.svg" type="image/svg+xml"></object>
+  </header>
+
+  <div>
+    <h2>Set your weekly feeding schedule</h2>
+  </div>
+
+  <div class="sh_container">
+    <div class="sh_container_time">
+      <div>
+        <label for='hour-dd'><b>Hour:</b></label>
+        <select id='hour-dd' name='hour'></select>
+      </div>
+
+      <div>
+        <label for='minute-dd'><b>Minute:</b></label>
+        <select id='minute-dd' name='minute'></select>
+      </div>
+
+      <div>
+        <label for='ampm-dd'><b>Am/Pm:</b></label>
+        <select id='ampm-dd' name='ampm'>
+          <option value='am'>AM</option>
+          <option value='pm'>PM</option>
+        </select>
+      </div>
+
+      <div>
+        <button id="addButton">Add</button>
+      </div>
+    </div>
+
+    <div class="sh_container_days">
+      <h3>Day/s of the week</h3>
+      <div>
+        <button>S</button>
+        <button>M</button>
+        <button>T</button>
+        <button>W</button>
+        <button>TH</button>
+        <button>F</button>
+        <button>S</button>
+      </div>
+
+      <div>
+        <div>
+          <h3>Set The amount to feed every week</h3>
+        </div>
+        <div>
+          <input type="text">
+        </div>
+        <div>
+          <button id="testButton">TEST</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sh_container_save">
+      <button id="saveButton">SAVE</button>
+    </div>
+</div>
+
+  <script src="./script.js" defer></script>
+  <script>
+      // Populate dropdown options
+  for (let i = 0; i <= 12; i++) {
+    document.getElementById('hour-dd').innerHTML += `<option>${i.toString().padStart(2, '0')}</option>`;
+  }
+
+  for (let i = 0; i <= 60; i++) {
+    document.getElementById('minute-dd').innerHTML += `<option>${i.toString().padStart(2, '0')}</option>`;
+  }
+
+  </script>
 </body>
 </html>

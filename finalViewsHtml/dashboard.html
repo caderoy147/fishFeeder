@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dashboard</title>
+  <link rel="stylesheet" href="./index.css">
+  <title>Dashboard</title>
 </head>
 <body>
+  <header>
+    <h1>FISH FEEDER</h1>
+    <object data="img/fishfeederlogo.svg" type="image/svg+xml"></object>
+    <h1>DASHBOARD</h1>
+  </header>
+  <div>
+    <div>
+      <button onclick="redirectTo('connection.html')">Wifi Settings</button>
+      <button onclick="redirectTo('scheduler.html')">Set Schedule</button>
+      <button onclick="redirectTo('usermanual.html')">User Manual</button>
+    </div>
+    <div>
+      <div>
+        <h3>Feeding History</h3>
+      </div>
+      <button>MANUAL DISPENSE</button>
+    </div>
+  </div>
+
+  <script src="./script.js" defer></script> <!-- Include your script.js file -->
   
 </body>
 </html>
